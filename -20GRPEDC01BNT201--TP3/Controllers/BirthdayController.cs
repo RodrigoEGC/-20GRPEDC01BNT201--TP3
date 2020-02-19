@@ -81,7 +81,8 @@ namespace _20GRPEDC01BNT201__TP3.Controllers
         // GET: Birthday/Delete/5
         public ActionResult Delete(int id)
         {
-            return View();
+            var birthday = _birthdayRepository.GetById(id);
+            return View(birthday);
         }
 
         // POST: Birthday/Delete/5
