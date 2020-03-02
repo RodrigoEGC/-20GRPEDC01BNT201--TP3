@@ -1,0 +1,46 @@
+﻿@model _20GRPEDC01BNT201__TP3.Models.LoginModel
+
+@{
+    ViewData["Title"] = "Login";
+}
+
+<h1>Login</h1>
+
+<h4>LoginModel</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Login">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Admin_id" class="control-label"></label>
+                <input asp-for="Admin_id" class="form-control" />
+                <span asp-validation-for="Admin_id" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Ad_Password" class="control-label"></label>
+                <input asp-for="Ad_Password" type="password" class="form-control" />
+                <span asp-validation-for="Ad_Password" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Sign In" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+@{ 
+    if (TempData["Message"] != null)
+    {
+        <script>
+            alert('@TempData["Message"]')
+        </script>
+    }
+}
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
