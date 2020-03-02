@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using _20GRPEDC01BNT201__TP3.Models;
+﻿using _20GRPEDC01BNT201__TP3.Models;
 using _20GRPEDC01BNT201__TP3.Repositories;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace _20GRPEDC01BNT201__TP3.Controllers
@@ -21,6 +16,10 @@ namespace _20GRPEDC01BNT201__TP3.Controllers
         public ActionResult Index()
         {
             return View(_birthdayRepository.GetAll());
+        }
+        public ActionResult SearchByName(string nome)
+        {
+            return View("Index", _birthdayRepository.SearchByName(nome));
         }
 
         // GET: Birthday/Details/5

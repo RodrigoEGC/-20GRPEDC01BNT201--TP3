@@ -30,6 +30,12 @@ namespace _20GRPEDC01BNT201__TP3.Repositories
             return birthday;
         }
 
+        public List<BirthdayModel> SearchByName(string nome)
+        {
+            var results = Birthdays.Where(x => x.Nome.Contains(nome, StringComparison.OrdinalIgnoreCase));
+            return results.ToList();
+        }
+
         public void Add(BirthdayModel createBirthdayModel)
         {
             Birthdays.Add(createBirthdayModel);

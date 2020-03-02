@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations;
 
 namespace _20GRPEDC01BNT201__TP3.Models
 {
@@ -13,6 +11,7 @@ namespace _20GRPEDC01BNT201__TP3.Models
 
         public string Sobrenome { get; set; }
 
+        [DataType(DataType.Date)]
         public DateTime Data { get; set; }
     }
 }
