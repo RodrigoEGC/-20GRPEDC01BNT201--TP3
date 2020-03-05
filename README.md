@@ -23,13 +23,13 @@ Uma pessoa deve ter os seguintes campos: nome, sobrenome e data de aniversário.
 
 ### Essa aplicação consiste em:
 
-Uma página de cadastro de pessoas.
-Uma página de edição de uma pessoa.
-Uma página de detalhes de uma pessoa.
-Uma página de deleção de uma pessoa.
-Uma página que exibe a lista de pessoas.
-Uma página de busca de pessoas.
-Você deve criar os Modelos, as Visões fortemente tipadas, e os Controladores.
+* Uma página de cadastro de pessoas.
+* Uma página de edição de uma pessoa.
+* Uma página de detalhes de uma pessoa.
+* Uma página de deleção de uma pessoa.
+* Uma página que exibe a lista de pessoas.
+* Uma página de busca de pessoas.
+* Você deve criar os Modelos, as Visões fortemente tipadas, e os Controladores.
 
 Você pode utilizar uma classe estática com coleções para representar a "base de dados" de pessoas.
 ###
