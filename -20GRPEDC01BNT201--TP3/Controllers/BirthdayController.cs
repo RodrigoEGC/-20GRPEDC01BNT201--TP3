@@ -101,5 +101,28 @@ namespace _20GRPEDC01BNT201__TP3.Controllers
                 return View();
             }
         }
+        AddLogin addLogin = new AddLogin();
+
+        public IActionResult Login()
+        {
+            return View();
+        }
+        [HttpPost]
+        public IActionResult Login([Bind] LoginModel loginModel)
+        {
+            int result = addLogin.LoginCheck(loginModel);
+            if (result == 1)
+            {
+                TempData["Message"] = "You are welcome to Admin Section";
+                return RedirectToAction(nameof(Index));
+
+            }
+            else
+            {
+                TempData["Message"] = "Admin id or Password is wrong.!";
+            }
+            return View();
+
+        }
     }
 }

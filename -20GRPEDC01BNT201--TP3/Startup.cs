@@ -46,7 +46,7 @@ namespace _20GRPEDC01BNT201__TP3
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Login}/{action=Login}/{id?}");
+                    pattern: "{controller=Birthday}/{action=Login}/{id?}");
             });
         }
     }

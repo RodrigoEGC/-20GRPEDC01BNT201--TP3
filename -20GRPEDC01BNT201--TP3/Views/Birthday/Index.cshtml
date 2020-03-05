@@ -32,8 +32,15 @@
             </ul>
             <form asp-action="SearchByName" class="form-inline my-2 my-lg-0">
                 <input name="nome" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit" value="Search by name">Search</button>
+                <button title="Search" class="btn btn-outline-success my-2 my-sm-0" type="submit" value="Search by name">Search</button>
             </form>
+            <div style="margin-left: 20px">
+                <button title="Clean" asp-action="Index" class="btn btn-info" type="button" value="clean">
+                    @Html.ActionLink("Clean", "Index")
+                </button>
+            </div>
+            
+            
         </div>
     </nav>
     <p>
